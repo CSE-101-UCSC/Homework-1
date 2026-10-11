@@ -1,7 +1,7 @@
 # CSE 101 Programming Assignment 1: README
 
 Answer the questions below (Section 11 of the handout) before you submit.
-This file is worth 10 points. See `GETTING_STARTED.md` for how to build and test your code.
+See `GETTING_STARTED.md` for how to build and test your code.
 
 **Name:**
 **Student ID:**

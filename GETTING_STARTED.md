@@ -27,7 +27,7 @@ git push -u origin main
 
 ### 2. Open it in a Codespace
 
-On **your** repository's page (not the course repository), click **Code → Codespaces → Create codespace on main**. The first start takes a minute or two. The Codespace has the same compiler as Gradescope.
+On **your** repository's page (not the course repository), click **Code → Codespaces → Create codespace on main**. The first start takes a minute or two. If VS Code asks whether you trust the authors of the files in this folder, click **Trust Folder & Continue**; otherwise the terminal will not open. The Codespace runs Linux like Gradescope.
 
 Your free GitHub account includes monthly Codespaces hours, which is plenty for this assignment. A Codespace stops by itself after 30 minutes of inactivity; to reopen it, go to **Code → Codespaces** on your repository and click its name.
 
@@ -118,7 +118,7 @@ In a Codespace you can also use the **Source Control** panel on the left: type a
 
 ## Working on your own computer
 
-A Codespace needs no setup and uses the same compiler as Gradescope, so it is the safest choice. If you would rather work on your own computer, set it up once as described below, then clone **your** private repository and use `make` and `./run_tests.sh` exactly as described above.
+A Codespace needs no setup and runs Linux like Gradescope, so it is the safest choice. If you would rather work on your own computer, set it up once as described below, then clone **your** private repository and use `make` and `./run_tests.sh` exactly as described above.
 
 To clone a private repository you must sign in to GitHub. The easiest way is the GitHub CLI: install it (see below), run `gh auth login` and follow the prompts, then run `gh repo clone <your-username>/<your-repository>`.
 
