@@ -4,11 +4,38 @@ The full assignment description is in the handout PDF. This page explains how to
 
 ## Setup
 
-1. Create your own **private** repository from this template.
-2. Open it in a GitHub Codespace: **Code → Codespaces → Create codespace on main**. The Codespace has the same compiler as Gradescope.
-3. In the Codespace terminal, run `make`. You should see `Rule check passed.` followed by a successful build.
+### 1. Make your own private copy
 
-You can also work on your own Mac or Windows computer instead of a Codespace. See [Working on your own computer](#working-on-your-own-computer) below.
+You cannot push to the course repository, so first make a copy that belongs to you.
+
+1. Sign in to GitHub and open https://github.com/CSE-101-UCSC/Homework-1.
+2. Click the green **Use this template** button, then **Create a new repository**.
+   **Do not click Fork.** A fork of this repository is always public, and making your solution public is an academic integrity violation.
+3. On the **Create a new repository** page:
+   - **Owner:** your own GitHub account.
+   - **Repository name:** anything you like, for example `cse101-homework-1`.
+   - **Visibility:** choose **Private**. This is required.
+   - Leave **Include all branches** unchecked.
+4. Click **Create repository**. Check that your new repository shows the label **Private** next to its name.
+
+**Already cloned the course repository instead?** Your clone is still connected to the course repository, so you cannot push your work. Create an empty **private** repository on GitHub (no README, no .gitignore), then run these commands inside your clone, using your new repository's URL:
+
+```
+git remote set-url origin https://github.com/<your-username>/<your-repository>.git
+git push -u origin main
+```
+
+### 2. Open it in a Codespace
+
+On **your** repository's page (not the course repository), click **Code → Codespaces → Create codespace on main**. The first start takes a minute or two. The Codespace has the same compiler as Gradescope.
+
+Your free GitHub account includes monthly Codespaces hours, which is plenty for this assignment. A Codespace stops by itself after 30 minutes of inactivity; to reopen it, go to **Code → Codespaces** on your repository and click its name.
+
+You can also work on your own Mac or Windows computer instead. See [Working on your own computer](#working-on-your-own-computer).
+
+### 3. Build the starter code
+
+In the Codespace terminal, run `make`. You should see `Rule check passed.` followed by a successful build. Then run `./run_tests.sh`. Every test fails until you write your code; that is expected.
 
 ## What is in this repository
 
@@ -77,22 +104,38 @@ These are the visible tests only. Gradescope also runs hidden tests, so passing 
 - No standard containers (`vector`, `list`, `map`, ...) and no library sorting (`std::sort`, `qsort`, ...).
 - Code is compiled with `g++ -std=c++17 -Wall -Wextra -pedantic-errors`.
 
+## Saving your work
+
+Work in a Codespace or on your computer is **not on GitHub until you commit and push it**, and Gradescope grades what is on GitHub. Save often:
+
+```
+git add main.cpp movies.cpp README.md
+git commit -m "Describe what you changed"
+git push
+```
+
+In a Codespace you can also use the **Source Control** panel on the left: type a message, click **Commit**, then **Sync Changes**.
+
 ## Working on your own computer
 
-A Codespace needs no setup and uses the same compiler as Gradescope, so it is the safest choice. If you would rather work on your own computer, set it up once as follows, then clone your private repository (`git clone <your repository URL>`) and use `make` and `./run_tests.sh` exactly as described above.
+A Codespace needs no setup and uses the same compiler as Gradescope, so it is the safest choice. If you would rather work on your own computer, set it up once as described below, then clone **your** private repository and use `make` and `./run_tests.sh` exactly as described above.
 
-**macOS.** Open Terminal and run `xcode-select --install` to install Apple's compiler and `make`. On a Mac, `g++` is Apple's clang compiler rather than GNU g++. Code that builds on a Mac almost always builds on Gradescope, but Gradescope's result is the one that counts: if it reports a build error that your Mac did not, fix it and submit again.
+To clone a private repository you must sign in to GitHub. The easiest way is the GitHub CLI: install it (see below), run `gh auth login` and follow the prompts, then run `gh repo clone <your-username>/<your-repository>`.
+
+**macOS.** Open Terminal and run `xcode-select --install` to install Apple's compiler and `make`. Install the GitHub CLI from https://cli.github.com. On a Mac, `g++` is Apple's clang compiler rather than GNU g++. Code that builds on a Mac almost always builds on Gradescope, but Gradescope's result is the one that counts: if it reports a build error that your Mac did not, fix it and submit again.
 
 **Windows.** Use WSL (Windows Subsystem for Linux), which gives you the same Linux tools as Gradescope:
 
 1. Open PowerShell as administrator, run `wsl --install`, and restart your computer.
-2. Open **Ubuntu** from the Start menu and run `sudo apt update && sudo apt install -y g++ make git`.
+2. Open **Ubuntu** from the Start menu and run `sudo apt update && sudo apt install -y g++ make git gh`.
 3. Clone your repository inside Ubuntu's home folder (run `cd ~` first), not in a Windows folder under `/mnt/c`.
 
 Do your work in the Ubuntu terminal. VS Code can open the folder with the **WSL** extension.
 
 ## Submitting
 
-1. Run `make clean`, then commit and push your work to your private repository.
-2. On Gradescope, submit with the **GitHub** option and choose your repository and branch.
+1. Run `make clean`, then commit and push your work (see [Saving your work](#saving-your-work)). Open your repository on GitHub and check that your latest changes are there.
+2. On Gradescope, open the assignment and submit with the **GitHub** option. The first time, Gradescope asks you to connect your GitHub account; allow it. Then choose your repository and the `main` branch.
 3. Gradescope grades the code at the moment you submit. If you push changes later, submit again.
+
+If your repository does not appear in Gradescope's list, make sure you are connected with the same GitHub account that owns the repository.
