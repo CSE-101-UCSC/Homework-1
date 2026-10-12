@@ -42,11 +42,13 @@ void printList(const MovieList& list) {
     (void)list;
 }
 
-void printFiltered(const MovieList& list, int year, const std::string& actor) {
+void printFiltered(const MovieList& list, int year, const std::string& actor,
+                   const std::string& title) {
     // TODO
     (void)list;
     (void)year;
     (void)actor;
+    (void)title;
 }
 
 void clearList(MovieList& list) {

@@ -68,6 +68,7 @@ make clean    # remove the program and saved test output
 ./LinkedList tests/10_dup_sample/input.txt
 ./LinkedList tests/16_filter_year/input.txt --year 1994
 ./LinkedList tests/20_filter_actor/input.txt --actor "Tom Hanks"
+./LinkedList tests/27_filter_title/input.txt --title "Little Women"
 ```
 
 To save the output to a file as well as seeing it: `./LinkedList input.txt | tee my_output.txt`
@@ -92,7 +93,7 @@ For each failing test, the script shows the command, what the test checks, and a
 +1994 | Pulp Fiction | John Travolta       <- your program printed this instead
 ```
 
-When every test passes, it prints `All 26 tests passed!`. Your program's output for every test is saved in `test_output/`, and what it printed to `std::cerr` is saved next to it in a `.stderr.txt` file.
+When every test passes, it prints `All 29 tests passed!`. Your program's output for every test is saved in `test_output/`, and what it printed to `std::cerr` is saved next to it in a `.stderr.txt` file.
 
 Tests in the **I/O check (not graded)** group (23 to 26) check that your program reads files and handles the command line the way the handout describes. They are worth no points, but every graded test runs your whole program, so make them pass too.
 

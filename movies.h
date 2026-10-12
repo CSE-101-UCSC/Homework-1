@@ -46,8 +46,9 @@ bool comesBefore(const Movie& a, const Movie& b);   // year, then title, then ac
 void sortList(MovieList& list);                      // insertion sort or merge sort
 void removeDuplicates(MovieList& list);
 void printList(const MovieList& list);
-// year == 0 means no year filter; empty actor means no actor filter
-void printFiltered(const MovieList& list, int year, const std::string& actor);
+// year == 0 means no year filter; an empty actor or title means no filter on it
+void printFiltered(const MovieList& list, int year, const std::string& actor,
+                   const std::string& title);
 void clearList(MovieList& list);
 
 #endif
