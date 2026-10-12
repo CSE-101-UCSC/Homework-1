@@ -1,6 +1,6 @@
 {
   "name": "CSE 101 Homework 1",
-  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04",
   "customizations": {
     "vscode": {
       "extensions": [
