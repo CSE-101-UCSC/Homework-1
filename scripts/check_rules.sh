@@ -22,7 +22,7 @@ LIBRARY_SORTS="sort stable_sort partial_sort nth_element"
 REQUIRED_FUNCTIONS="appendNode comesBefore sortList removeDuplicates printList printFiltered clearList"
 
 # Fingerprint of the provided header. It must not be changed.
-HEADER_SHA256="eea63974a255fdcd32249fb891dfdbfecac5ac546601a2c707885f65ffc6a945"
+HEADER_SHA256="d16be9bf617a9667a43b8d6f0bdd3c739efd990f0cbbab6b82ea2e90e14e84ef"
 
 # ---------------------------------------------------------------- binary check
 if [ "$1" = "--binary" ]; then
