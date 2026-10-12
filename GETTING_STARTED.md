@@ -93,6 +93,8 @@ For each failing test, the script shows the command, what the test checks, and a
 
 When every test passes, it prints `All 26 tests passed!`. Your program's output for every test is saved in `test_output/`, and what it printed to `std::cerr` is saved next to it in a `.stderr.txt` file.
 
+Tests in the **I/O check (not graded)** group (23 to 26) check that your program reads files and handles the command line the way the handout describes. They are worth no points, but every graded test runs your whole program, so make them pass too.
+
 These are the visible tests only. Gradescope also runs hidden tests, so passing everything here does not guarantee full credit. Write extra input files of your own and check the results by hand.
 
 ## Rules enforced by `make`
