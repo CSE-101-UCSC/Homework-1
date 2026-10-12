@@ -153,7 +153,7 @@ if [ $failed -eq 0 ]; then
         echo "${GREEN}${BOLD}All $ran selected tests passed.${RESET} Run ./run_tests.sh with no arguments to run every test."
     else
         echo "${GREEN}${BOLD}All $ran tests passed!${RESET}"
-        echo "Before submitting: remove any debug prints, fill in README.md, and push your work."
+        echo "Before submitting: remove any debug prints, fill in citations.md, and push your work."
     fi
 else
     echo "${RED}${BOLD}$failed of $ran tests failed.${RESET} Scroll up to see the differences for each failed test."
